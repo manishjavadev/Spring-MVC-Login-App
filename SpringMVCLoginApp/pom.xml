@@ -1,0 +1,245 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.manish.javadev</groupId>
+	<artifactId>SpringMVCLoginApp</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+
+
+	<properties>
+		<jdk.version>1.8</jdk.version>
+		<servlet.version>3.1.0</servlet.version>
+		<jsp.version>2.2.1</jsp.version>
+		<jstl.version>1.2</jstl.version>
+		<spring.version>4.1.0.RELEASE</spring.version>
+		<spring.security.version>4.1.0.RELEASE</spring.security.version>
+		<hibernate.version>5.1.0.Final</hibernate.version>
+		<hibernate.validator.version>5.1.0.Final</hibernate.validator.version>
+		<mysql.connector.version>5.1.6</mysql.connector.version>
+		<log4j.version>2.3</log4j.version>
+		<slf4j.version>1.7.12</slf4j.version>
+	</properties>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${servlet.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.el</groupId>
+			<artifactId>javax.el-api</artifactId>
+			<version>${jsp.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>${jstl.version}</version>
+		</dependency>
+
+		<!-- Java Mail API -->
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>1.4.3</version>
+		</dependency>
+
+		<!-- Commons Email dependency -->
+		<!-- <dependency> <groupId>org.apache.commons</groupId> <artifactId>commons-email</artifactId> 
+			<version>1.2</version> </dependency> -->
+
+		<!-- Spring Framework Dependencies -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<!-- Spring Security -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>${spring.security.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>${spring.security.version}</version>
+		</dependency>
+
+		<!-- JSR-303 Bean Validation -->
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+			<version>1.1.0.Final</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>${hibernate.validator.version}</version>
+		</dependency>
+
+		<!-- Jboss dependency -->
+		<dependency>
+			<groupId>org.jboss.logging</groupId>
+			<artifactId>jboss-logging</artifactId>
+			<version>3.3.0.Final</version>
+		</dependency>
+
+		<!-- Hibernate Dependencies -->
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+
+		<!-- MySQL -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.connector.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>1.4</version>
+		</dependency>
+
+		<!-- Spring Social for facebook login -->
+		<dependency>
+			<groupId>org.springframework.social</groupId>
+			<artifactId>spring-social-core</artifactId>
+			<version>1.1.1.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.social</groupId>
+			<artifactId>spring-social-web</artifactId>
+			<version>1.1.1.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.social</groupId>
+			<artifactId>spring-social-facebook</artifactId>
+			<version>2.0.1.RELEASE</version>
+		</dependency>
+
+		<!-- Binding for Log4J -->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-slf4j-impl</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+
+		<!-- Log4j API and Core implementation required for binding -->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+
+		<!-- Dependencies for Google login -->
+		<dependency>
+			<groupId>com.google.http-client</groupId>
+			<artifactId>google-http-client</artifactId>
+			<version>1.13.1-beta</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.http-client</groupId>
+			<artifactId>google-http-client-jackson</artifactId>
+			<version>1.13.1-beta</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.apis</groupId>
+			<artifactId>google-api-services-oauth2</artifactId>
+			<version>v2-rev29-1.13.2-beta</version>
+		</dependency>
+
+
+		<!-- Jackson JSON dependencies -->
+		<!-- <dependency> <groupId>com.fasterxml.jackson.core</groupId> <artifactId>jackson-core</artifactId> 
+			<version>2.7.1</version> </dependency> <dependency> <groupId>com.fasterxml.jackson.core</groupId> 
+			<artifactId>jackson-databind</artifactId> <version>2.7.1</version> </dependency> -->
+
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.15</version>
+		</dependency>
+
+	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>google-api-services</id>
+			<url>http://google-api-client-libraries.appspot.com/mavenrepo</url>
+		</repository>
+
+		<repository>
+			<id>Java.Net</id>
+			<url>http://download.java.net/maven/2/</url>
+		</repository>
+	</repositories>
+
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.5.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.6</version>
+				<configuration>
+					<warSourceDirectory>WebContent</warSourceDirectory>
+					<failOnMissingWebXml>false</failOnMissingWebXml>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
